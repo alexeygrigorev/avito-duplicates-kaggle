@@ -1,7 +1,4 @@
-
 # coding: utf-8
-
-# In[18]:
 
 from glob import glob
 from time import time
@@ -12,25 +9,16 @@ import pandas as pd
 import numpy as np
 
 from sklearn.metrics import roc_auc_score
-
 from sklearn.linear_model import LogisticRegression
-from sklearn.ensemble import ExtraTreesClassifier, RandomForestClassifier
-
-import xgboost as xgb
-
 from sklearn.cross_validation import KFold
-
-
 
 df_train = pd.read_csv('../input/ItemPairs_train.csv', usecols=['isDuplicate'], dtype=np.uint8)
 df_test = pd.read_csv('../input/ItemPairs_test.csv', usecols=['id'], dtype=np.uint32)
 
 
 data = sorted(glob('models*/*.csv*'))
-
 trains = []
 tests = []
-
 names = []
 
 for i in tqdm(range(0, len(data), 2)):

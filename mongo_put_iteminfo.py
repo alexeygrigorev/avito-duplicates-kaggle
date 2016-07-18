@@ -120,7 +120,7 @@ def split_images_array(arr):
 def process_batch(batch, location_region, parent_category, geo, pool):
     batch.set_index('itemID', inplace=1)
 
-    batch['parent_category'] = batch.categoryID.apply(location_region.get)
+    batch['parent_category'] = batch.categoryID.apply(parent_category.get)
     batch['region'] = batch.locationID.apply(location_region.get)
     batch = pd.concat([batch, geo.loc[batch.index].fillna('None')], axis=1)
 

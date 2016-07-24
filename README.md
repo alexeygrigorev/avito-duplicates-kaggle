@@ -3,6 +3,7 @@
 A part of the 5th place solution for the ADAD competition run on kaggle
 
 - High level overview of features: https://www.kaggle.com/c/avito-duplicate-ads-detection/forums/t/22190/solution-sharing/126772#post126772 
+- Slides: http://www.slideshare.net/AlexeyGrigorev/avito-duplicate-ads-detection-kaggle
 - This is a code dump with no cleaning. Please let me know if some stuff doesn't work or something is not clear
 
 

@@ -32,7 +32,7 @@ def read_dictionaries():
 def read_geo_data():
     t0 = time()
 
-    geo_zip = ZipFile('../ext_data/geo_stuff.zip')
+    geo_zip = ZipFile('ext_data/geo_stuff.zip')
     with geo_zip.open('geo-train.txt') as f:
         df_geo_train = pd.read_csv(f, sep='\t', header=None, 
                                    names=['itemID', 'region', 'city', 'zip_code'])
